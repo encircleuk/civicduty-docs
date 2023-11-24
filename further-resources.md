@@ -1,3 +1,3 @@
-# Further Resources
+# ℹ Further Resources
 
-Praxis Prefect Server container build on dockerhub:&#x20;
+Praxis Prefect Server container build on dockerhub: [https://hub.docker.com/repository/docker/encircle/civicduty-prefect](https://hub.docker.com/repository/docker/encircle/civicduty-prefect/general)
