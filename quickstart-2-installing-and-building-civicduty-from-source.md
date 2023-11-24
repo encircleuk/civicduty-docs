@@ -4,7 +4,9 @@ description: >-
   Docker on Linux
 ---
 
-# Getting Started
+# Quickstart 2 - Installing and Building CivicDuty from source
+
+Github Repo location [https://lab.civicrm.org/ttaylor/civicduty](https://lab.civicrm.org/ttaylor/civicduty)
 
 ## Requirements
 
