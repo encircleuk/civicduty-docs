@@ -4,7 +4,7 @@ description: >-
   Docker on Linux
 ---
 
-# Quickstart 2 - Installing and Building CivicDuty from source
+# 🏁 Quickstart 1 - Running The Docker Stack
 
 Github Repo location [https://lab.civicrm.org/ttaylor/civicduty](https://lab.civicrm.org/ttaylor/civicduty)
 
@@ -13,14 +13,6 @@ Github Repo location [https://lab.civicrm.org/ttaylor/civicduty](https://lab.civ
 Assuming Docker is running on a Linux OS such as Ubuntu, Debian or Redhat.
 
 Docker should be installed on host, including docker-compose - [Official Docker install instructions](broken-reference)
-
-Requires the make tool to be installed on host
-
-```bash
-sudo apt -y install make
-```
-
-Requires Python 3.11.x to be installed on host
 
 _These instructions were derived on a host running Debian 11 (bullseye) Linux distro ._
 
@@ -39,18 +31,6 @@ git clone https://lab.civicrm.org/ttaylor/civicduty
 cd civicduty
 ```
 
-* Get the python packages required to build the prefect docker container
-
-```bash
-git submodule update --init --recursive
-```
-
-* Run the make file to build the prefect container from source
-
-```bash
-make docker
-```
-
 ### Optional Steps
 
 Change Postgres password in the configuration file `versions.venv` i.e.
@@ -58,6 +38,8 @@ Change Postgres password in the configuration file `versions.venv` i.e.
 ```
 POSTGRES_PASSWORD=postgres-test
 ```
+
+
 
 ## Start the Stack
 
@@ -68,6 +50,8 @@ In the directory that you installed civicduty to, run the following command:
 ```
 
 By default the stack will restart after the host is rebooted
+
+
 
 ## Stop the Stack
 
