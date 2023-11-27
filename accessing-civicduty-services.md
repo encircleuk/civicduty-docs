@@ -39,6 +39,46 @@ ssh civicduty-host
 
 Once you have SSH tunnel to port 4200 up and running, leave the ssh connection open in the terminal. Then simply go to the url: [http://localhost:4200](http://localhost:4200)
 
+## Connecting to your application stack
+
+Assuming your application  (e.g. CiviCRM on Drupal) is running on docker, you will need to add the `prefect` network to your container stack.&#x20;
+
+Assuming the stack is created using `docker-compose` you would add the `prefect` network in your networks definitions in the docker-compose.yml file as so:
+
+```yaml
+...
+networks:
+  frontend:
+  backend:
+  prefect:
+    external:
+      name: prefect
+```
+
+Then in the container definition you would refer to the prefect network as so:
+
+&#x20;
+
+```yaml
+dev-drupal:
+    container_name: dev-drupal
+    image: encircle/drupal9:latest-arm
+    #ports:
+    #  - '9903'
+    expose:
+      - '9000'
+    depends_on:
+      - dev-database
+    volumes:
+      - ./drupal:/var/src/drupal
+      - ./logs/php/:/var/log/php  
+    networks:
+      - frontend
+      - backend
+      - mail
+      - prefect
+```
+
 ## Postgres Database
 
 By default the CivicDuty Docker stack publishes the Postgres port to the local host on tcp port 5433
