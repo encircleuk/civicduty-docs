@@ -33,8 +33,16 @@ cd civicduty
 
 * Create the `.env` configuration file from the template file `versions.venv` i.e.
 
+For x64 (Intel) machines
+
 ```bash
 cp versions.env .env
+```
+
+For arm64 machines (AWS Graviton/ Mac Silicon etc)
+
+```
+cp versions-arm.env .env
 ```
 
 ### Optional Steps

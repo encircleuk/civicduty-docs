@@ -16,6 +16,8 @@ Docker should be installed on host, including docker-compose - [Official Docker 
 
 Requires the make tool to be installed on host
 
+
+
 ```bash
 sudo apt -y install make
 ```
@@ -47,8 +49,16 @@ git submodule update --init --recursive
 
 * Run the make file to build the prefect container from source
 
+For x64 (Intel) run:
+
 ```bash
 make docker
+```
+
+For arm64  (Aws Graviton, Apple Silicon, Raspberry PI etc.) run:
+
+```bash
+make docker-arm
 ```
 
 ### Optional Steps
