@@ -91,4 +91,9 @@ POSTGRES_PASSWORD=postgres-test
 
 ## MiniIO Storage container
 
-TBC
+MinIO is an S3 compatable file storage container that runs as part of the civicduty stack. It is used as shared storage between system components to store file assests suchs as deployed flows.
+
+The minio service runs on TCP 9000/9001 and can be accessed over a tunnelled ssh connection from you workstation using the URL \`http://localhost:9000'&#x20;
+
+The username and password are specified in the civicduty `.env` file.
+

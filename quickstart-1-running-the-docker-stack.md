@@ -31,9 +31,15 @@ git clone https://lab.civicrm.org/ttaylor/civicduty
 cd civicduty
 ```
 
+* Create the `.env` configuration file from the template file `versions.venv` i.e.
+
+```bash
+cp versions.env .env
+```
+
 ### Optional Steps
 
-Change Postgres password in the configuration file `versions.venv` i.e.
+Change Postgres password in the configuration file `.venv` i.e.
 
 ```
 POSTGRES_PASSWORD=postgres-test
