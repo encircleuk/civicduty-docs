@@ -28,7 +28,10 @@ For convenience, you can set up an alias in your `~\.ssh\config` file so that th
 Host civicduty-host
   Hostname civicduty-host.somedomain.com
   User myusernameonthehost 
-  LocalForward 4200 localhost:4200
+  LocalForward 4200 localhost:4200 #port for Prefect Dashboard
+  LocalForward 9000 localhost:9000 #port for Minio Storage Container
+  LocalForward 9001 localhost:9001 #port for Minio Storage Container
+  
 ```
 
 Then you can connect via ssh as follows:
@@ -97,3 +100,6 @@ The minio service runs on TCP 9000/9001 and can be accessed over a tunnelled ssh
 
 The username and password are specified in the civicduty `.env` file.
 
+#### Creating a remote storage block in Prefect for Minio
+
+<figure><img src=".gitbook/assets/add block remote minio.png" alt=""><figcaption></figcaption></figure>
